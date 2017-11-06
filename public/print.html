@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Features values</title>
+    
+  </head>
+
+  <body>
+    <h1> Results </h1>
+    <div class="container">
+    </div>
+    <pre id="features" style="font-size:200%">
+      test
+    </pre>
+
+    <script>
+      var queryDict = {}
+      location.search.substr(1).split("&").forEach(function(item) {queryDict[item.split("=")[0]] = item.split("=")[1]})
+      var str = JSON.stringify(queryDict, null, 4);
+      document.getElementById("features").innerHTML = str;
+    </script>
+  </body>
+</html>
+
